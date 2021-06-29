@@ -12,9 +12,10 @@ const navItems=[
 const Navbar = () => {
      return(
   <div className='navbar'>
-    <NavbarItems navItems={navItems}/>
-    <Logo />
-    <Socials />
+    item
+    {/* <NavbarItems navItems={navItems}/> */}
+    {/* <Logo />
+    <Socials /> */}
   </div>)
 };
 
