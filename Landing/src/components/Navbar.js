@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
-import NavbarItems from "./NavbarItems";
 import Socials from './Socials'
+import NavbarItems from "./NavbarItems";
 
 const navItems=[
     'Profile',
@@ -11,12 +11,11 @@ const navItems=[
 
 const Navbar = () => {
      return(
-  <div className='navbar'>
-    item
-    {/* <NavbarItems navItems={navItems}/> */}
-    {/* <Logo />
-    <Socials /> */}
-  </div>)
+  <nav className='navbar'>
+    <NavbarItems navItems={navItems}/>
+    <Logo />
+    <Socials />
+  </nav>)
 };
 
 export default Navbar;

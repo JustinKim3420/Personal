@@ -15,49 +15,61 @@ body,
   width: 100%;
   font-family: "Open Sans", sans-serif;
 }
+
+.icon{
+  color:var(--dark-blue);
+  font-size: 3rem;
+  padding:0 0.25rem;
+}
+
 .inline {
   display: inline-block;
 }
 
 .logo {
+  height: 3rem;
+  width: 3rem;
   font-size: 2rem;
-  height: 100%;
   border-radius: 0.5rem;
   color: var(--orange);
   background-color: var(--dark-blue);
   border: none;
+  cursor:pointer;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  padding: 0 3rem;
-  height: 2.5rem;
   font-size: 2rem;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
   background-color: var(--orange);
 }
 
+.nav-icon{
+  background-color: inherit;
+  color:var(--dark-blue);
+  border:none;
+  cursor: pointer;
+}
+
 .nav-item {
-  display: flex;
+  display: block;
   color: var(--dark-blue);
   text-decoration: none;
-  margin: 0 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.75s;
+}
+
+.nav-item:hover{
+  background-color: var(--white);
 }
 
 .nav-items {
-  display: flex;
+  width:40rem;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-@media only screen and (min-width: 600px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    height: 10%;
-    font-size: 2rem;
-    background-color: var(--orange);
-  }
-}

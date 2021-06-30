@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Logo = ()=>{
-    return(
-        <button className='logo'>
-            JK
-        </button>
-    )
-}
+const Logo = () => {
+  return <button className="logo">JK</button>;
+};
 
-export default Logo
+export default Logo;
