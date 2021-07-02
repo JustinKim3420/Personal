@@ -1,17 +1,29 @@
-import React, {useState} from 'react'
+import React from "react";
 
-const Burger = ()=>{
-    const [buttonClicked, setButtonClicked] = useState(false)
+const Burger = ({setButtonClicked, buttonClicked}) => {
 
-    return(
-        <button className='burger' onClick={
-            ()=>setButtonClicked(!buttonClicked)
-        }>
-            <div className={buttonClicked? 'burger-line transition-burger':'burger-line' }></div>
-            <div className={buttonClicked? 'burger-line transition-burger':'burger-line' }></div>
-            <div className={buttonClicked? 'burger-line transition-burger':'burger-line' }></div>
-        </button>
-    )
-}
+  return (
+    <button
+      className={buttonClicked ? "burger whole-rotate" : "burger"}
+      onClick={() => setButtonClicked(!buttonClicked)}
+    >
+      <div
+        className={
+          buttonClicked ? "burger-line transition-burger" : "burger-line"
+        }
+      ></div>
+      <div
+        className={
+          buttonClicked ? "burger-line transition-burger" : "burger-line"
+        }
+      ></div>
+      <div
+        className={
+          buttonClicked ? "burger-line transition-burger" : "burger-line"
+        }
+      ></div>
+    </button>
+  );
+};
 
-export default Burger
+export default Burger;
