@@ -4,19 +4,20 @@ import Socials from "./Socials";
 import NavbarItems from "./NavbarItems";
 import Burger from "./Burger";
 
-const navItems = ["Home", "Projects", "Contacts"];
 
-const Navbar = ({ buttonClicked, setButtonClicked }) => {
+const Navbar = ({ buttonClicked, setButtonClicked, navItems }) => {
   return (
-    <nav className="navbar">
-      <Burger
-        buttonClicked={buttonClicked}
-        setButtonClicked={setButtonClicked}
-      />
-      <NavbarItems navItems={navItems} />
-      <Logo />
-      <Socials />
-    </nav>
+    <div className='container'>
+      <nav className="navbar">
+        <Burger
+          buttonClicked={buttonClicked}
+          setButtonClicked={setButtonClicked}
+        />
+        <NavbarItems navItems={navItems} />
+        <Logo />
+        <Socials />
+      </nav>
+    </div>
   );
 };
 
