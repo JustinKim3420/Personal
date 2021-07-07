@@ -16,6 +16,10 @@ body,
   font-family: "Open Sans", sans-serif;
 }
 
+body{
+  padding-top: var(--navbar-height);
+}
+
 .burger {
   display: none;
   border: none;
@@ -83,6 +87,7 @@ body,
 .navbar {
   display: flex;
   position: fixed;
+  top:0;
   box-sizing: border-box;
   width:100%;
   height:var(--navbar-height);
@@ -92,6 +97,7 @@ body,
   align-items: center;
   padding: 0 3rem;
   background-color: var(--orange);
+  border-bottom: 0.125rem solid var(--dark-blue);
 }
 
 .nav-icon {
@@ -122,16 +128,27 @@ body,
 }
 
 .overlay{
-  background-color: rgba(0, 0, 0, 0.25);
   position: fixed;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0);
   top: var(--navbar-height);
   bottom:0;
+  left: 0;
+  right: 0;
   z-index: 2;
   color: black;
   width: 100%;
+  transition: visibility 0s 0.75s, background-color 0.5s ;
+}
+
+.overlay.transition{
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: visibility 0s 0s, background-color 0.5s;
 }
 
 .overlay-list{
+  overflow: hidden;
   background-color:var(--orange);
   color: var(--dark-blue);
   font-size: 2rem;
@@ -139,14 +156,42 @@ body,
   margin: 0;
   padding: 0;
   list-style: none;
-  min-width: 10rem;
-  max-width: 40rem;
-  width:100%;
+  max-width: 30rem;
+  width:0;
+  height: 100%;
+  transition: width 0.5s;
+}
+
+.overlay-list.transition{
+  overflow: auto;
+  width:80%;
+}
+
+.overlay-list-item{
+  padding:0.5rem 0 0.5rem 3.75rem;
+  cursor: pointer;
+  transition: background-color 0.75s;
+}
+
+.overlay-list-item:hover{
+  background-color: var(--white);
+}
+
+.overlay-nav-item{
+  display: inline-block;
+  color: var(--dark-blue);
+  line-height: var(--navbar-height);
+  text-decoration: none;
 }
 
 .whole-rotate{
   transform:rotate(360deg);
 }
+
+.link{
+  text-decoration: none;
+}
+
 
 @media only screen and (max-width: 1028px) {
   .burger {

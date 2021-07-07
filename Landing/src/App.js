@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Overlay from "./components/Overlay";
 
+import { Switch, Route } from "react-router-dom";
+
 const App = () => {
   const navItems = ["Home", "Projects", "Contacts"];
 
@@ -14,8 +16,10 @@ const App = () => {
         navItems={navItems}
       />
       <Overlay buttonClicked={buttonClicked} navItems={navItems}/>
-      <div className='text'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
+      <Switch>
+        <Route path='/home'>
+          <h1>This is the Main page</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
         velit condimentum, eleifend metus varius, pharetra velit. Integer
         efficitur felis vel rhoncus venenatis. Etiam id tellus ut ligula
         ullamcorper facilisis vel et tortor. Fusce dignissim sem a sapien
@@ -96,18 +100,18 @@ const App = () => {
         consectetur pretium, nisi dolor dignissim nibh, hendrerit tincidunt ante
         enim non nisi. Duis ultrices auctor diam at pretium. Aenean erat neque,
         consequat eget eleifend euismod, venenatis ac velit. Aliquam eleifend
-        dui sed lacus rhoncus, id euismod dolor rutrum. Nunc mattis imperdiet
-        arcu, id tincidunt nisi gravida sed. Phasellus eleifend lacus vel rutrum
-        facilisis. Cras egestas purus facilisis tortor laoreet iaculis. Nunc
-        sodales eros magna, nec tincidunt lectus tristique eu. Nam sed mi eu
-        velit pretium placerat ut luctus quam. Morbi id sollicitudin massa.
-        Morbi sed massa dolor. Donec sem lorem, maximus at elementum sed,
-        malesuada non elit. Nam gravida iaculis neque, non egestas elit laoreet
-        a. Quisque quis justo ac massa mattis finibus ut scelerisque neque.
-        Mauris non erat sagittis, efficitur massa molestie, laoreet elit.
-        Aliquam ex magna, fringilla non dui rutrum, tincidunt lacinia nunc.
-        Aliquam eu fermentum velit, sit amet pulvinar ante.
-      </div>
+        </Route>
+        <Route path='/projects'>
+          <h1>These are my current projects</h1>
+        </Route>
+        <Route path='/Contacts'>
+          <h1>Please contact me!</h1>
+        </Route>
+        <Route path='/'>
+          <h1>Please contact me!</h1>
+        </Route>
+      </Switch>
+      
     </div>
   );
 };

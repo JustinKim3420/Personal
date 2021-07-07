@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Overlay = ({buttonClicked, navItems}) => {
+const Overlay = ({ buttonClicked, navItems }) => {
   return (
-    <div className='container'>
-      <div className="overlay">
-          <div className='overlay-nav'>
-              <ul className='overlay-list'>
-                  {
-                      navItems.map((item)=>{
-                        return(
-                            <li key={item} className='overlay-list-item'>{item}</li>
-                        )
-                      })
-                  }
-              </ul>
-          </div>
-      </div>
+    <div className={buttonClicked ? "overlay transition" : "overlay"}>
+      <ul
+        className={buttonClicked ? "overlay-list transition" : "overlay-list"}
+      >
+        {navItems.map((item) => {
+          return (
+            <li key={item} className="overlay-list-item">
+              <Link className="overlay-nav-item" to={`/${item}`}>
+                {item}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
