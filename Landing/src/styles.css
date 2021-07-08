@@ -74,12 +74,14 @@ body{
 
 .logo {
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
   margin: 0.25rem 0.75rem;
   font-size: 2rem;
   border-radius: 0.5rem;
   color: var(--orange);
   background-color: var(--dark-blue);
+  text-decoration:none;
+  text-align: center;
   border: none;
   cursor: pointer;
 }
@@ -148,6 +150,7 @@ body{
 }
 
 .overlay-list{
+  position: relative;
   overflow: hidden;
   background-color:var(--orange);
   color: var(--dark-blue);
@@ -156,32 +159,33 @@ body{
   margin: 0;
   padding: 0;
   list-style: none;
-  max-width: 30rem;
   width:0;
+  max-width: 0;
   height: 100%;
-  transition: width 0.5s;
+  transition: max-width 0.5s , width 0.5s;
 }
 
 .overlay-list.transition{
-  overflow: auto;
-  width:80%;
-}
-
-.overlay-list-item{
-  padding:0.5rem 0 0.5rem 3.75rem;
-  cursor: pointer;
-  transition: background-color 0.75s;
-}
-
-.overlay-list-item:hover{
-  background-color: var(--white);
+  overflow-y: auto;
+  overflow-x:none;
+  width:30rem;
+  max-width: 80%;
 }
 
 .overlay-nav-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding:0.5rem 0 0.5rem 3.75rem;
   display: inline-block;
   color: var(--dark-blue);
   line-height: var(--navbar-height);
   text-decoration: none;
+  background-color: var(--orange);
+  transition: background-color 0.5s;
+}
+
+.overlay-nav-item:hover{
+  background-color: var(--white);
 }
 
 .whole-rotate{

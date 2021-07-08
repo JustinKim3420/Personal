@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 
 const Logo = () => {
-  return <button className="logo">JK</button>;
+  return <Link className="logo" to='/'>JK</Link>;
 };
 
 export default Logo;

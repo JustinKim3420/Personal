@@ -10,13 +10,19 @@ const Navbar = ({ buttonClicked, setButtonClicked, navItems }) => {
     if (buttonClicked === false) {
       document.body.style.overflowY = "hidden";
     }else{
-      document.body.style.overflowY = "scroll";
+      document.body.style.overflowY = "auto";
     }
   };
 
+  const handleNavClick = (event)=>{
+    if(buttonClicked===true && event.target.className==='navbar'){
+      handleBurger()
+    }
+  }
+
   return (
     <div className="container">
-      <nav className="navbar">
+      <nav className="navbar" onClick={(event)=>{handleNavClick(event)}}>
         <Burger buttonClicked={buttonClicked} setButtonClicked={handleBurger} />
         <NavbarItems navItems={navItems} />
         <Logo />

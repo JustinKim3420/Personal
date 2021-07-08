@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Overlay from "./components/Overlay";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route , Redirect } from "react-router-dom";
 
 const App = () => {
   const navItems = ["Home", "Projects", "Contacts"];
@@ -15,9 +15,9 @@ const App = () => {
         setButtonClicked={setButtonClicked}
         navItems={navItems}
       />
-      <Overlay buttonClicked={buttonClicked} navItems={navItems}/>
+      <Overlay buttonClicked={buttonClicked} setButtonClicked={setButtonClicked} navItems={navItems}/>
       <Switch>
-        <Route path='/home'>
+        <Route path='/Home'>
           <h1>This is the Main page</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
         velit condimentum, eleifend metus varius, pharetra velit. Integer
@@ -82,24 +82,6 @@ const App = () => {
         sit amet tortor bibendum dapibus a imperdiet purus. Praesent sodales
         purus nisi, id mattis purus faucibus eu. Sed sed urna sit amet justo
         mattis tempus non a risus. Vivamus vel efficitur neque. Nam vel ligula
-        neque. In at sodales velit, ac pretium nunc. Cras sapien ex, commodo ut
-        efficitur quis, tincidunt vitae tortor. Morbi dictum, odio et eleifend
-        rutrum, massa neque aliquet ligula, nec sollicitudin arcu dui ac orci.
-        Etiam accumsan euismod lorem non euismod. Donec vitae ultrices elit.
-        Vestibulum a est dolor. Curabitur at pretium nisi, sit amet pulvinar
-        nulla. Donec aliquet dignissim dolor, in cursus eros lobortis in.
-        Phasellus placerat gravida erat. Nunc iaculis massa sed purus convallis,
-        vel faucibus metus tincidunt. Sed eu tortor in dui pharetra ullamcorper
-        ut ac lorem. Sed imperdiet arcu vel tellus rhoncus, vel convallis est
-        molestie. Nullam blandit augue orci. Quisque interdum lacus sit amet
-        augue finibus, id mattis massa molestie. Donec ornare ipsum et arcu
-        sollicitudin, non congue nisl rutrum. Morbi mauris dolor, rhoncus in
-        ante eu, tempor lacinia lacus. Mauris ut lorem scelerisque justo
-        placerat rhoncus. Sed imperdiet tristique pretium. Aliquam lorem sapien,
-        ornare ac malesuada a, suscipit at mi. Aliquam porttitor, purus et
-        consectetur pretium, nisi dolor dignissim nibh, hendrerit tincidunt ante
-        enim non nisi. Duis ultrices auctor diam at pretium. Aenean erat neque,
-        consequat eget eleifend euismod, venenatis ac velit. Aliquam eleifend
         </Route>
         <Route path='/projects'>
           <h1>These are my current projects</h1>
@@ -108,7 +90,7 @@ const App = () => {
           <h1>Please contact me!</h1>
         </Route>
         <Route path='/'>
-          <h1>Please contact me!</h1>
+          <Redirect to='/Home'/>
         </Route>
       </Switch>
       
