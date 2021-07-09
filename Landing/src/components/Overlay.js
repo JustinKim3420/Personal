@@ -10,6 +10,14 @@ const Overlay = ({ buttonClicked, navItems, setButtonClicked }) => {
       document.body.style.overflowY = "auto";
     }
   }
+  const handleResize = ()=>{
+    console.log('handleResize')
+    if(window.innerWidth>=1028 && buttonClicked===true){
+      setButtonClicked(false)
+    }
+  }
+  window.addEventListener('resize', handleResize)
+
 
   const handleEmptyClick = (event)=>{
     if (buttonClicked === true && event.target.className.includes('overlay ')) {

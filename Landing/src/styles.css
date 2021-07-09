@@ -50,6 +50,10 @@ body{
   transform: translate(0, -0.75rem) rotate(-45deg) ;
 }
 
+.center-text{
+  text-align: center;
+}
+
 .container{
   display: flex;
   flex-direction: column;
@@ -70,6 +74,10 @@ body{
 
 .inline {
   display: inline-block;
+}
+
+.header{
+  text-align: center;
 }
 
 .logo {
@@ -116,7 +124,7 @@ body{
   line-height: var(--navbar-height);
   text-decoration: none;
   padding: 0 0.75rem;
-  transition: background-color 0.75s;
+  transition: background-color 0.25s;
 }
 
 .nav-item:hover {
@@ -140,13 +148,13 @@ body{
   z-index: 2;
   color: black;
   width: 100%;
-  transition: visibility 0s 0.75s, background-color 0.5s ;
+  transition: visibility 0s 0.25s, background-color 0.25s ;
 }
 
 .overlay.transition{
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: visibility 0s 0s, background-color 0.5s;
+  transition: visibility 0s 0s, background-color 0.25s;
 }
 
 .overlay-list{
@@ -162,7 +170,7 @@ body{
   width:0;
   max-width: 0;
   height: 100%;
-  transition: max-width 0.5s , width 0.5s;
+  transition: max-width 0.25s , width 0.25s;
 }
 
 .overlay-list.transition{
@@ -181,11 +189,22 @@ body{
   line-height: var(--navbar-height);
   text-decoration: none;
   background-color: var(--orange);
-  transition: background-color 0.5s;
+  transition: background-color 0.25s;
 }
 
 .overlay-nav-item:hover{
   background-color: var(--white);
+}
+
+.remove-bottom-margin{
+  margin-bottom: 0;
+}
+
+.text-container{
+  box-sizing: border-box;
+  color:var(--dark-blue);
+  width: 100%;
+  padding: 0 3rem;
 }
 
 .whole-rotate{

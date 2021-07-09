@@ -25,7 +25,7 @@ const Navbar = ({ buttonClicked, setButtonClicked, navItems }) => {
       <nav className="navbar" onClick={(event)=>{handleNavClick(event)}}>
         <Burger buttonClicked={buttonClicked} setButtonClicked={handleBurger} />
         <NavbarItems navItems={navItems} />
-        <Logo />
+        <Logo setButtonClicked={setButtonClicked} buttonClicked={buttonClicked}/>
         <Socials />
       </nav>
     </div>
