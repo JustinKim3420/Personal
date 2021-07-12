@@ -11,7 +11,6 @@ const Overlay = ({ buttonClicked, navItems, setButtonClicked }) => {
     }
   }
   const handleResize = ()=>{
-    console.log('handleResize')
     if(window.innerWidth>=1028 && buttonClicked===true){
       setButtonClicked(false)
     }
