@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Overlay from "./components/Overlay";
 import Homepage from "./components/Homepage";
-import SkillBar from './components/SkillBar'
 
 import { Switch, Route , Redirect } from "react-router-dom";
 
