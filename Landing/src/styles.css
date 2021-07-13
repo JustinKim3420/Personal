@@ -67,6 +67,7 @@ body,
 }
 
 .nav-items {
+  flex-grow: 1;
   width:40rem;
   padding: 0;
   margin: 0;
