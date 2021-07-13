@@ -4,8 +4,9 @@
   --orange: #fca311;
   --gray: #e5e5e5;
   --white: #ffffff;
+  --teal:#73EEDC;
   --navbar-height:3.5rem;
-  --max-width:100rem;
+  --max-width:150rem;
 }
 
 html,
@@ -241,6 +242,7 @@ body{
   width: 100%;
   grid-template-columns: repeat(auto-fit,20rem);
   justify-content:center;
+  max-width: var(--max-width);
   font-size: 1.25rem;
 }
 
@@ -250,7 +252,6 @@ body{
   text-align: center;
   align-items: center;
   background-color: var(--gray);
-  margin:0;
   padding:0 3rem 1rem 3rem;
 }
 
@@ -273,7 +274,9 @@ body{
 .text-container{
   box-sizing: border-box;
   color:var(--dark-blue);
+  max-width: var(--max-width);
   width: 100%;
+  margin: auto;
   padding: 0 3rem;
 }
 
