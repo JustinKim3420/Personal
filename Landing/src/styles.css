@@ -6,7 +6,7 @@
   --white: #ffffff;
   --teal:#73EEDC;
   --navbar-height:3.5rem;
-  --max-width:150rem;
+  --max-width:100rem;
 }
 
 html,
@@ -20,6 +20,19 @@ body,
 
 body{
   padding-top: var(--navbar-height);
+  min-width:20rem;
+}
+
+.background-teal{
+  background-color: var(--teal);
+}
+
+.background-gray{
+  background-color: var(--gray);
+}
+
+.background-white{
+  background-color: var(--white);
 }
 
 .burger {
@@ -64,8 +77,8 @@ body{
   width: 100%;
 }
 
-.justify-right {
-  float: right;
+.header{
+  text-align: center;
 }
 
 .icon {
@@ -78,8 +91,8 @@ body{
   display: inline-block;
 }
 
-.header{
-  text-align: center;
+.justify-right {
+  float: right;
 }
 
 .logo {
@@ -202,6 +215,7 @@ body{
 .remove-bottom-margin{
   margin-bottom: 0;
 }
+
 .skillbar{
   display: inline-block;
   white-space: nowrap;
@@ -246,13 +260,12 @@ body{
   font-size: 1.25rem;
 }
 
-.skill-section{
+.homepage-section{
   display: flex;
   flex-direction:column;
   text-align: center;
   align-items: center;
-  background-color: var(--gray);
-  padding:0 3rem 1rem 3rem;
+  padding:2rem 3rem;
 }
 
 .skill{
@@ -268,20 +281,35 @@ body{
 
 .skill-name{
   float:left;
-  margin-right: 1.5rem;
 }
 
 .text-container{
-  box-sizing: border-box;
+  box-sizing:border-box;
+  max-width:var(--max-width);
   color:var(--dark-blue);
-  max-width: var(--max-width);
   width: 100%;
-  margin: auto;
   padding: 0 3rem;
 }
 
 .whole-rotate{
   transform:rotate(360deg);
+}
+
+.work-experience-entry{
+  text-align: left;
+  margin:0;
+}
+
+.work-experience-title{
+  margin:0;
+}
+
+.work-experience-description{
+  margin:0;
+}
+
+.work-experience-list{
+  margin: 0;
 }
 
 .link{
