@@ -20,6 +20,7 @@ body,
 
 body{
   padding-top: var(--navbar-height);
+  min-width: 30rem;
 }
 
 .burger {
@@ -268,7 +269,6 @@ body{
 
 .skill-name{
   float:left;
-  margin-right: 1.5rem;
 }
 
 .text-container{
