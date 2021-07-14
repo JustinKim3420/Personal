@@ -68,20 +68,36 @@ const Homepage = () => {
           <h1 className="header">WORK EXPERIENCE</h1>
           <div className="work-experience-entry">
             <h2 className="work-experience-title">Quality Engineer</h2>
-            <h5 className="work-experience-description">
+            <h4 className="work-experience-description">
               Zimmer Biomet
-            </h5>
-            <h5 className="work-experience-description">
+            </h4>
+            <h4 className="work-experience-description">
               February 2020 - Current
-            </h5>
+            </h4>
             <ul className='work-experience-list'>
               <li>Identify recurring issues and nonconformances, and develop corrective and prventive action plants to resolve these issues</li>
-              <li>Analyze complaints and complete a complaint history to determine if additional correction/ preventive actions are needed</li>
+              <li>Address incoming complaints and complete a complaint history search to determine if additional correction/ preventive actions are needed</li>
               <li>Maintain up-to-date knowledge of 6 product lines by researching their blue prints and following change notices</li>
               <li>Analyze more than 6 FMEA files for gaps in failure modes and harm</li>
+              <li>Consistently communicate with the development and manufacturing team to adress complaints and possible issues</li>
+            </ul>
+          </div>
+          <div className="work-experience-entry">
+            <h2 className="work-experience-title">Supervisor</h2>
+            <h5 className="work-experience-description">
+              Stony Brook University
+            </h5>
+            <h5 className="work-experience-description">
+              August 2018 - September 2019
+            </h5>
+            <ul className='work-experience-list'>
+              <li></li>
             </ul>
           </div>
         </div>
+      </div>
+      <div className="homepage-section background-white">
+        <h1>EDUCATION</h1>
       </div>
     </div>
   );

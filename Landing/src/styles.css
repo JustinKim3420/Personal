@@ -18,25 +18,21 @@ body,
   font-family: "Open Sans", sans-serif;
 }
 
-body{
-  padding-top: var(--navbar-height);
-<<<<<<< HEAD
-  min-width: 30rem;
-=======
-  min-width:20rem;
+.background-gray{
+  background-color: var(--gray);
 }
 
 .background-teal{
   background-color: var(--teal);
 }
 
-.background-gray{
-  background-color: var(--gray);
-}
-
 .background-white{
   background-color: var(--white);
->>>>>>> edd6ef82c979cf0f5db76144326977e386e5d892
+}
+
+body{
+  padding-top: var(--navbar-height);
+  min-width: 30rem;
 }
 
 .burger {
