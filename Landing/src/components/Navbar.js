@@ -12,6 +12,7 @@ const Navbar = ({ buttonClicked, setButtonClicked, navItems }) => {
       document.body.style.overflowX = "hidden";
     }else{
       document.body.style.overflowY = "auto";
+      document.body.style.overflowX = "auto";
     }
   };
 

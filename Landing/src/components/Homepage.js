@@ -8,22 +8,38 @@ const Homepage = () => {
         <div className="text-container">
           <h1 className="header">ABOUT ME</h1>
           <p className="center-text">
-            My name is Justin and I graduated from Stony Brook University with a
+            Ambitious to learn and always better than I was yesterday. My name
+            is Justin and I graduated from Stony Brook University with a
             Bachelors of Engineering in Biomedical Engineering. Currently, I
             work at Zimmer Biomet as a quality engineer, and I've been taking an
-            online course for web dev,{" "}
+            online course for web dev,
             <a href="https://fullstackopen.com/en/">FullStackOpen</a>, courtesy
             of the University of Helsinki.
           </p>
-          <p>
+          <p className="remove-bottom-margin">
             I have experience working primarily with the MERN stack. Here's a
             quick rundown of the thing's I've been doing this past year:
           </p>
-            <div className='skill'>Created simple CRUD API using the MERN stack</div>
-            <div className='skill'>Implemented JWT Authenication within web applications</div>
-            <div className='skill'>Utilized MongoDB to store user information</div>
-            <div className='skill'>Replaced traditional state management with Redux and graphQL</div>
-            <div className='skill'>Created this personal landing page!</div>
+          <div className="skill">
+            Created simple CRUD API using the MERN stack
+          </div>
+          <div className="skill">
+            Implemented JWT Authenication within web applications
+          </div>
+          <div className="skill">
+            Utilized MongoDB to store user information
+          </div>
+          <div className="skill">
+            Replaced traditional state management with Redux and graphQL
+          </div>
+          <div className="skill">Created this personal landing page!</div>
+          <p>
+            I'm interested in any business and field that aims to improve. From
+            farming, medical devices, and even finances, ask me to make an
+            improvement in the industry, and you'll keep me occupied for a hot
+            minute. I look forward to any challenges thrown, so definitely shoot
+            me an email if you have any!
+          </p>
         </div>
       </div>
       <div className="homepage-section background-gray">
@@ -133,15 +149,17 @@ const Homepage = () => {
       <div className="homepage-section background-white">
         <div className="text-container">
           <h1 className="header">EDUCATION</h1>
-          <h2 className="work-experience-title">Stony Brook University</h2>
-          <h4 className="work-experience-description">
-            Bachelor of Engineering in Biomedical Engineering; Minor in
-            Mechanical Engineering
-          </h4>
-          <h4 className="work-experience-description">
-            Graduation date: May 2019
-          </h4>
-          <h4 className="work-experience-description">GPA: 3.69</h4>
+          <div className="work-experience-entry">
+            <h2 className="work-experience-title">Stony Brook University</h2>
+            <h4 className="work-experience-description">
+              Bachelor of Engineering in Biomedical Engineering; Minor in
+              Mechanical Engineering
+            </h4>
+            <h4 className="work-experience-description">
+              Graduation date: May 2019
+            </h4>
+            <h4 className="work-experience-description">GPA: 3.69</h4>
+          </div>
         </div>
       </div>
     </div>

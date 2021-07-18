@@ -71,14 +71,45 @@ body{
 
 .container{
   display: flex;
+  position: relative;
   flex-direction: column;
   margin:0;
   padding:0;
   width: 100%;
 }
 
+
 .display-block{
   display:block;
+}
+
+.footer{
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.125rem solid var(--dark-blue);
+  width: 100%;
+  background-color: var(--orange);
+}
+
+.footer-list{
+  text-align: center;
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+
+.footer-link{
+  display: inline-block;
+  color: var(--dark-blue);
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.25s;
+}
+
+.footer-link:hover{
+  text-decoration: underline;
 }
 
 .header{
@@ -100,6 +131,8 @@ body{
 }
 
 .logo {
+  position: relative;
+  right: 0;
   height: 3rem;
   min-width: 3rem;
   margin: 0.25rem 0.75rem;

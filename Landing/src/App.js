@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Overlay from "./components/Overlay";
 import Homepage from "./components/Homepage";
+import Footer from "./components/Footer";
 
 import { Switch, Route , Redirect } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const App = () => {
 
   const [buttonClicked, setButtonClicked] = useState(false);
   return (
-    <div className="container">
+    <div className="container" style={{position:'relative'}}>
       <Navbar
         buttonClicked={buttonClicked}
         setButtonClicked={setButtonClicked}
@@ -31,7 +32,7 @@ const App = () => {
           <Redirect to='/Home'/>
         </Route>
       </Switch>
-      
+      <Footer navItems={navItems}/>
     </div>
   );
 };
