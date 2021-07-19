@@ -2,9 +2,9 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
+app.use(express.static('build'))
 
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static('build'))
 }
 
 app.use(express.json())
