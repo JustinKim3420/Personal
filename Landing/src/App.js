@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Overlay from "./components/Overlay";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 
 import { Switch, Route , Redirect } from "react-router-dom";
 
@@ -23,7 +24,7 @@ const App = () => {
           <Homepage/>
         </Route>
         <Route path='/projects'>
-          <h1>These are my current projects</h1>
+          <Projects />
         </Route>
         <Route path='/Contacts'>
           <h1>Please contact me!</h1>

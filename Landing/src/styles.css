@@ -32,14 +32,15 @@ body,
 
 body{
   padding-top: var(--navbar-height);
-  min-width: 30rem;
 }
 
 .burger {
   display: none;
+  position: absolute;
+  left:3rem;
   border: none;
   cursor: pointer;
-  background-color: inherit;
+  background-color:transparent;
   transition: all 0.25s;
 }
 
@@ -126,16 +127,14 @@ body{
   display: inline-block;
 }
 
-.justify-right {
-  float: right;
+.text-right{
+  text-align: right;
 }
 
 .logo {
-  position: relative;
-  right: 0;
   height: 3rem;
+  z-index: -1;
   min-width: 3rem;
-  margin: 0.25rem 0.75rem;
   font-size: 2rem;
   border-radius: 0.5rem;
   color: var(--orange);
@@ -357,6 +356,11 @@ body{
 @media only screen and (max-width: 1028px) {
   .burger {
     display: block;
+  }
+
+  .logo{
+  position: absolute;
+  right: 3rem;
   }
 
   .nav-items {
