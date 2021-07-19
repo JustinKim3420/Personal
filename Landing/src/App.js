@@ -4,6 +4,7 @@ import Overlay from "./components/Overlay";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
+import Contacts from "./components/Contacts";
 
 import { Switch, Route , Redirect } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const App = () => {
           <Projects />
         </Route>
         <Route path='/Contacts'>
-          <h1>Please contact me!</h1>
+          <Contacts />
         </Route>
         <Route path='/'>
           <Redirect to='/Home'/>

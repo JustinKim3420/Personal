@@ -10,9 +10,9 @@ const Homepage = () => {
           <p className="center-text">
             Ambitious to learn and always better than I was yesterday. My name
             is Justin and I graduated from Stony Brook University with a
-            Bachelors of Engineering in Biomedical Engineering. Currently, I
-            work at Zimmer Biomet as a quality engineer, and I've been taking an
-            online course for web dev,
+            Bachelors of Engineering in Biomedical Engineering. I am a self
+            taught programmer. Currently, I work at Zimmer Biomet as a quality
+            engineer, and I've been taking an online course for web dev,
             <a href="https://fullstackopen.com/en/">FullStackOpen</a>, courtesy
             of the University of Helsinki.
           </p>

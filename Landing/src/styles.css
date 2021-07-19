@@ -79,6 +79,9 @@ body{
   width: 100%;
 }
 
+.contact{
+  padding:3rem ;
+}
 
 .display-block{
   display:block;
@@ -227,13 +230,14 @@ body{
 
 .overlay-list.transition{
   overflow-y: auto;
-  overflow-x:none;
+  overflow-x: auto;
   width:30rem;
   max-width: 80%;
 }
 
 .overlay-nav-item{
   width: 100%;
+  min-width: 12rem;
   box-sizing: border-box;
   padding:0.5rem 0 0.5rem 3.75rem;
   display: inline-block;
@@ -246,6 +250,10 @@ body{
 
 .overlay-nav-item:hover{
   background-color: var(--white);
+}
+
+.project{
+  padding: 0rem 3rem;
 }
 
 .remove-bottom-margin{

@@ -6,8 +6,10 @@ const Overlay = ({ buttonClicked, navItems, setButtonClicked }) => {
     setButtonClicked(!buttonClicked)
     if (buttonClicked === false) {
       document.body.style.overflowY = "hidden";
+      document.body.style.overflowX = "hidden";
     }else{
       document.body.style.overflowY = "auto";
+      document.body.style.overflowX = "auto";
     }
   }
   const handleResize = ()=>{
