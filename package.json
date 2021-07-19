@@ -11,8 +11,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start":"node index",
-    "test":"nodemon index"
+    "start":"cross-env NODE_ENV=production node index",
+    "test":"cross-env NODE_ENV=development nodemon index",
+    "build:ui": "rm -rf build && cd ./Landing/ && npm run build --prod && cp -r build ..",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "logs:prod": "heroku logs --tail"
   },
   "author": "",
   "license": "ISC"
