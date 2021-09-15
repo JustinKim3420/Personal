@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 
-const connect = (databaseURL) => {
+const connect = async (databaseURL) => {
     if (process.env.ENVIRONMENT === 'test') {
         await mongoose.connect(databaseURL, {
             useNewUrlParser: true,

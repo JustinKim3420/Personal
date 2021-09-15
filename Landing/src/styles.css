@@ -151,6 +151,7 @@ body{
 .navbar {
   display: flex;
   position: fixed;
+  z-index: 1;
   top:0;
   box-sizing: border-box;
   width:100%;
@@ -253,6 +254,8 @@ body{
 }
 
 .project{
+  display: flex;
+  position: relative;
   padding: 0rem 3rem;
 }
 
@@ -304,6 +307,10 @@ body{
   font-size: 1.25rem;
 }
 
+.homepage{
+  position: relative;
+}
+
 .homepage-section{
   display: flex;
   flex-direction:column;
@@ -333,6 +340,10 @@ body{
   color:var(--dark-blue);
   width: 100%;
   padding: 0 3rem;
+}
+
+.video{
+  position:relative;
 }
 
 .whole-rotate{
